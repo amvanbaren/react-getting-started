@@ -1,6 +1,7 @@
 require('./App.css')
 
 let React = require('react')
+let Comment = require('./comment/Comment.js')
 let Welcome = require('./Welcome.js')
 let logo = require('./logo.svg')
 
@@ -9,9 +10,9 @@ var App = React.createClass({
     return (
       <div className="App">
         <img src={logo} className="App-logo" alt="logo" />
-        <Welcome name="Sara" />
-        <Welcome name="Cahal" />
         <Welcome name="Edite" />
+        <Comment author={{ name: 'Sara', avatarUrl: 'http://placekitten.com/g/64/64' }} date={new Date()} text="First!" />
+        <Comment author={{ name: 'Joann', avatarUrl: 'http://placekitten.com/g/64/64'}} date={new Date()} text="Second :(" />
       </div>
     )
   }
