@@ -1,4 +1,5 @@
 let React = require('react')
+let UserInfo = require('./UserInfo.js')
 
 let Comment = React.createClass({
   formatDate (date) {
@@ -8,15 +9,7 @@ let Comment = React.createClass({
   render () {
     return (
       <div className="Comment">
-        <div className="UserInfo">
-          <img className="Avatar"
-            src={this.props.author.avatarUrl}
-            alt={this.props.author.name}
-          />
-          <div className="UserInfo-name">
-            {this.props.author.name}
-          </div>
-        </div>
+        <UserInfo user={this.props.author} />
         <div className="Comment-text">
           {this.props.text}
         </div>

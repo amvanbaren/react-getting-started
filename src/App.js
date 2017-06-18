@@ -1,7 +1,7 @@
 require('./App.css')
 
 let React = require('react')
-let Comment = require('./Comment.js')
+let Comment = require('./comment/Comment.js')
 let Welcome = require('./Welcome.js')
 let logo = require('./logo.svg')
 
